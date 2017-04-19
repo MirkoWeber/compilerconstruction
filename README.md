@@ -1,4 +1,4 @@
 # compilerconstruction
 
-# TODO: - write lexxer
-#       - upload grammar
+ TODO: - write lexxer
+      

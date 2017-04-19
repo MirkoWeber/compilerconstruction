@@ -1,0 +1,19 @@
+S -> PC ID PB | PC PB
+PB -> FN
+PC -> keyword = Package PN
+PN -> identifier
+ID -> keyword = import string
+FN -> keyword = "func" identifier token = ( token = ) token = { FC token = }
+AG -> identifier | string
+FC -> identifier token = . identifier token = ( AG token = ) token = ; | null
+
+string = "{letter | number}" 
+identifier = letter { letter | number }
+tokens = ( | ) | ; | { | } | "
+
+keywords
+--------
+
+package
+import
+func

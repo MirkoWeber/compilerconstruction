@@ -15,15 +15,21 @@
 #define SYMBOLTABLE_H
 
 #include <vector>
+#include <string>
 
-class SymbolTable {
+class Symbol {
 public:
     
-    SymbolTable();
-    SymbolTable(const SymbolTable& orig);
-    virtual ~SymbolTable();
+    Symbol();
+    Symbol(std::string , std::string , int , int );
+    Symbol(const Symbol& orig);
+    virtual ~Symbol();
+    void print();
 private:
-
+    std::string type; 
+    std::string value;
+    int iChar;
+    int line;
 };
 
 #endif /* SYMBOLTABLE_H */

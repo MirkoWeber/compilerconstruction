@@ -16,6 +16,8 @@
 
 #include <iostream>
 #include <String>
+#include <vector>
+#include "Symbol.h"
 
 
 class lexxer {
@@ -26,8 +28,16 @@ public:
     nextToken();
     
 private:
-    int iCharacter;
-    std::String sourceFile;
+    bool stringStart;
+    int iChar;
+    void lex();
+    void tryMatch(std::string&);
+    std::string sourceFile;
+    std::vector<std::string> keyWord;
+    std::vector<std::string> token;
+    std::vector<Symbol> myTable;
+    bool compareWithVector(const std::string& , std::vector<std::string>& );
+    
 };
 
 #endif /* LEXXER_H */

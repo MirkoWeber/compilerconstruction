@@ -18,7 +18,7 @@
 #include <String>
 #include <vector>
 #include "Symbol.h"
-
+#include "Types.h"
 
 class lexxer {
 public:
@@ -36,7 +36,9 @@ private:
     std::vector<std::string> token;
     std::vector<Symbol*> myTable;
     bool compareWithVector(const std::string& , const std::vector<std::string>& );
-    
+    void cleanTable();
+    Types type;
+    void removeFromVector(int);
 };
 
 #endif /* LEXXER_H */

@@ -16,10 +16,11 @@
 #include <fstream>
 #include <iostream>
 #include <streambuf>
-
+#include "Types.h"
 using namespace std;
 
 lexxer::lexxer() {
+    type = Types();
     string gans = " ";
     gans.at(0) = '"';
     token.push_back("(");
@@ -69,19 +70,19 @@ void lexxer::lex(){
         if (compareWithVector( cCharString, token )) {
             if(!quotationStart && cChar == '"' ) {
                 quotationStart = true;
-                myTable.push_back(new Symbol(cCharString , "token" , iChar , 0));
+                myTable.push_back(new Symbol(cCharString , type.token , iChar , 0));
             }else
             {
                 if(quotationStart && cChar == '"') quotationStart = false; 
             }
             if(!quotationStart){
-                myTable.push_back(new Symbol(cCharString , "token" , iChar , 0));
+                myTable.push_back(new Symbol(cCharString , type.token , iChar , 0));
             }
             
             if(toGet.length() > 0 && quotationStart == false ){ // abschließenden Token gefunden und etwas ist in toGet?
                 if(compareWithVector( toGet , keyWord )) {
                     tmp = Symbol(  );
-                    myTable.insert( myTable.end() - 1 , new Symbol(toGet , "keyword" , iChar , 0) );
+                    myTable.insert( myTable.end() - 1 , new Symbol(toGet , type.keyword , iChar , 0) );
                     toGet = "";
                 }
                 else{   // muss dann wohl identifier oder konstante sein
@@ -89,7 +90,7 @@ void lexxer::lex(){
                     if( tableEnd - 1 >= 0 ){ // hole den Wert vor dem jetzt gelesenen token hier
                         if(myTable.at( ( tableEnd - 1 ) )->getValue().at( 0 ) == '"' && myTable.at( ( tableEnd ) )->getValue().at( 0 ) == '"' ){ 
                             // anführungszeichen umgeben den Wert, dann konstanter string!
-                            myTable.insert(myTable.end() - 1,new Symbol( toGet , "conststring" , iChar , 0 ));
+                            myTable.insert(myTable.end() - 1,new Symbol( toGet , type.constantString , iChar , 0 ));
                             toGet = "";
                         }
                         else // keine String konstante? Dann entweder konstante oder identifier
@@ -97,11 +98,11 @@ void lexxer::lex(){
                             if(toGet.at(0) > 47 && toGet.at(0) < 58 ){ // startet mit numerischen Symbol?
                                 // muss dann Nummer sein, TODO: später prüfen, dass auch wirklich alles nummern sind, sonst Fehlermeldung und lexxer beenden
                                 
-                                myTable.insert(myTable.end() - 1,new Symbol( toGet , "constnumber" , iChar , 0 ));
+                                myTable.insert(myTable.end() - 1,new Symbol( toGet , type.constantNumeric , iChar , 0 ));
                                 toGet = ""; 
                             }else{ // startet nicht mit nummer? Dann auf jeden identifier alter!
                                 
-                                myTable.insert(myTable.end() - 1,new Symbol( toGet , "identifier" , iChar , 0 ));
+                                myTable.insert(myTable.end() - 1,new Symbol( toGet , type.identifier , iChar , 0 ));
                                 toGet = "";  
                             }
 
@@ -114,11 +115,44 @@ void lexxer::lex(){
         }
         toGet += sourceFile.at(i);
     }
-    cout << myTable.size();
+    cout << "old size:" << myTable.size() << "\n";
+    cleanTable();
+    cout << "new Size:" << myTable.size();
     for(int i = 0 ; i < myTable.size() ; i ++){
         myTable.at(i)->print();
     }
 }
+
+void lexxer::cleanTable(){
+    char gans = '"';
+    string gansS = " ";
+    gansS.at(0) = gans;
+    for( int i = myTable.size() - 1 ; i >0 ; i-- ){
+        if(myTable.at(i)->getType().compare(type.token) == 0){
+            if(myTable.at(i)->getValue().compare(gansS) == 0){
+                removeFromVector(i);
+                continue;
+            }
+            if(myTable.at(i)->getValue().compare(" ") == 0){
+                removeFromVector(i);
+                continue;
+            }
+            if(myTable.at(i)->getValue().compare("\n") == 0){
+                removeFromVector(i);
+                continue;
+            }
+        }
+    }
+}
+
+void lexxer::removeFromVector(int it){
+    for(int i = it ; i < myTable.size(); i++){
+        if( i < myTable.size() - 1){
+            myTable.at(i) = myTable.at(i+1);
+        }else myTable.pop_back();
+    }
+}
+
 bool lexxer::compareWithVector(const string &compare ,const vector<string> &check ){
     for(int i = 0 ; i < check.size() ; i++){
         if( compare.compare(check.at(i))==0) { 

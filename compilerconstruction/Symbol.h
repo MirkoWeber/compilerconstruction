@@ -25,6 +25,9 @@ public:
     Symbol(const Symbol& orig);
     virtual ~Symbol();
     void print();
+    std::string getType();
+    std::string getValue();
+    int getIChar();
 private:
     std::string type; 
     std::string value;

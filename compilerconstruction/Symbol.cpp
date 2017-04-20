@@ -13,16 +13,30 @@
 
 #include "Symbol.h"
 #include <iostream>
-Symbol::Symbol(std::string type , std::string value , int iChar , int line) {
-    this->value = value;
+Symbol::Symbol(std::string valueG , std::string typeG , int iChar , int line) {
+    value = valueG;
     this->line = line;
     this->iChar = iChar;
-    this->type = type;
+    type = typeG;
 }
 
 void Symbol::print(){
-    std::cout <<"value: " <<value << " " << type << " " << std::endl; 
+    std::cout <<"value: " <<value << " " << "type: " << type << " " << std::endl; 
 }
+
+std::string Symbol::getValue(){
+    return value;
+}
+
+std::string Symbol::getType(){
+    return type;
+}
+
+int Symbol::getIChar(){
+    return iChar;
+}
+
+
 
 Symbol::Symbol() {
 }

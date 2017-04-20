@@ -26,17 +26,16 @@ public:
     lexxer(const lexxer& orig);
     virtual ~lexxer();
     nextToken();
-    
+    void lex();
 private:
     bool stringStart;
     int iChar;
-    void lex();
-    void tryMatch(std::string&);
+    
     std::string sourceFile;
     std::vector<std::string> keyWord;
     std::vector<std::string> token;
-    std::vector<Symbol> myTable;
-    bool compareWithVector(const std::string& , std::vector<std::string>& );
+    std::vector<Symbol*> myTable;
+    bool compareWithVector(const std::string& , const std::vector<std::string>& );
     
 };
 

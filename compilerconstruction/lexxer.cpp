@@ -27,6 +27,9 @@ lexxer::lexxer() {
     token.push_back(";");
     token.push_back("{");
     token.push_back("}");
+    token.push_back(" ");
+    token.push_back(".");
+    token.push_back("\n");
     token.push_back(gans);
     keyWord.push_back("package");
     keyWord.push_back("import");
@@ -37,7 +40,6 @@ lexxer::lexxer() {
         sourceFile.assign((std::istreambuf_iterator<char>(fs)),
                  std::istreambuf_iterator<char>());
     }
-    lex();
     cout << sourceFile;
 }
 
@@ -55,56 +57,73 @@ lexxer::nextToken(){
 
 void lexxer::lex(){
     string toGet ="";
-    for(int i = 0 ; i< sourceFile.length();i++){
+    bool quotationStart = false;
+    char cChar;
+    string cCharString;
+    Symbol tmp;
+    for(int i = 0 ; i< sourceFile.length();i++) {
         iChar = i;
+        cChar = sourceFile.at(i);
+        cCharString = cChar;
         
-        if( ( sourceFile.at(i) == ' '  || sourceFile.at(i) == '\n' || sourceFile.at(i) == ';' ) ) {
-            if( toGet.compare("") == 0 ) 
+        if (compareWithVector( cCharString, token )) {
+            if(!quotationStart && cChar == '"' ) {
+                quotationStart = true;
+                myTable.push_back(new Symbol(cCharString , "token" , iChar , 0));
+            }else
             {
-                continue;
+                if(quotationStart && cChar == '"') quotationStart = false; 
             }
-            else{// has to be identifier or string
-                if(stringStart && toGet.at(toGet.size() - 1 ) == '"'){
-                    toGet.erase(toGet.size()-1);
-                    myTable.push_back(Symbol("string",toGet,iChar,0));
+            if(!quotationStart){
+                myTable.push_back(new Symbol(cCharString , "token" , iChar , 0));
+            }
+            
+            if(toGet.length() > 0 && quotationStart == false ){ // abschließenden Token gefunden und etwas ist in toGet?
+                if(compareWithVector( toGet , keyWord )) {
+                    tmp = Symbol(  );
+                    myTable.insert( myTable.end() - 1 , new Symbol(toGet , "keyword" , iChar , 0) );
                     toGet = "";
-                }else 
-                {
-                    if(stringStart == false && toGet.at(toGet.size() - 1 ) != '"'  ){
-                        myTable.push_back(Symbol("identifier",toGet,iChar,0));
+                }
+                else{   // muss dann wohl identifier oder konstante sein
+                    int tableEnd = myTable.size() - 1; 
+                    if( tableEnd - 1 >= 0 ){ // hole den Wert vor dem jetzt gelesenen token hier
+                        if(myTable.at( ( tableEnd - 1 ) )->getValue().at( 0 ) == '"' && myTable.at( ( tableEnd ) )->getValue().at( 0 ) == '"' ){ 
+                            // anführungszeichen umgeben den Wert, dann konstanter string!
+                            myTable.insert(myTable.end() - 1,new Symbol( toGet , "conststring" , iChar , 0 ));
+                            toGet = "";
+                        }
+                        else // keine String konstante? Dann entweder konstante oder identifier
+                        {
+                            if(toGet.at(0) > 47 && toGet.at(0) < 58 ){ // startet mit numerischen Symbol?
+                                // muss dann Nummer sein, TODO: später prüfen, dass auch wirklich alles nummern sind, sonst Fehlermeldung und lexxer beenden
+                                
+                                myTable.insert(myTable.end() - 1,new Symbol( toGet , "constnumber" , iChar , 0 ));
+                                toGet = ""; 
+                            }else{ // startet nicht mit nummer? Dann auf jeden identifier alter!
+                                
+                                myTable.insert(myTable.end() - 1,new Symbol( toGet , "identifier" , iChar , 0 ));
+                                toGet = "";  
+                            }
+
+                        }
                     }
                 }
             }
-                
             
+            continue;
         }
-        toGet+=sourceFile.at(i);
-        tryMatch(toGet);
-        
+        toGet += sourceFile.at(i);
     }
     cout << myTable.size();
     for(int i = 0 ; i < myTable.size() ; i ++){
-        myTable.at(i).print();
+        myTable.at(i)->print();
     }
 }
-
-void lexxer::tryMatch(string &compare){ // TODO compare funktion schreiben die vektor übermittelt bekommt
-    char gans ='"';
-    if(compareWithVector(compare , token)){
-        myTable.push_back(Symbol("token",compare,iChar,0));
-        if( compare.at(0) == gans  ) stringStart = true; 
-        compare="";   
-        }
-    if(compareWithVector(compare , keyWord)){
-        myTable.push_back(Symbol("keyword",compare,iChar,0));
-            compare="";
-        }
-    return;
-}
-
-bool lexxer::compareWithVector(const string &compare , vector<string> &check){
+bool lexxer::compareWithVector(const string &compare ,const vector<string> &check ){
     for(int i = 0 ; i < check.size() ; i++){
-        if( compare.compare(check.at(i))==0) return true;
+        if( compare.compare(check.at(i))==0) { 
+            return true;
+        }
     }
     return false;
 }

@@ -21,7 +21,7 @@ Symbol::Symbol(std::string valueG , std::string typeG , int iChar , int line) {
 }
 
 void Symbol::print(){
-    std::cout <<"value: " <<value << " " << "type: " << type << " " << std::endl; 
+    std::cout <<"value: " <<value << " " << "type: " << type << " " << "at line:" << line << std::endl; 
 }
 
 std::string Symbol::getValue(){

@@ -1,11 +1,17 @@
 S -> PC ID PB | PC PB
+PC -> keyword"Package" identifier
+ID -> keyword"import" string
 PB -> FN
-PC -> keyword = Package PN
-PN -> identifier
-ID -> keyword = import string
-FN -> keyword = "func" identifier token = ( token = ) token = { FC token = }
-AG -> identifier | string
-FC -> identifier token = . identifier token = ( AG token = ) token = ; | null
+FN -> keyword"func" identifier '(' ')' '{' FB '}'
+FB -> identifier '=' AE | keyword"if" ?? | identifier FC | ';' FB | null 
+AE -> code von Taschenrechner Beispiel hier rein
+FC -> '.' identifier FC |  '(' AG 
+AG -> identifier AG' | const AG' | ')'
+AG' -> ',' AG 
+
+
+
+// nur für lexxer
 
 string = "{letter | number}" 
 identifier = letter { letter | number }

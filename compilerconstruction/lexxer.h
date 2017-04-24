@@ -27,16 +27,20 @@ public:
     virtual ~lexxer();
     nextToken();
     void lex();
+    Symbol* next();
 private:
     bool stringStart;
     int iChar;
-    
+    int iLine;
+    int lexChar;
+    bool quotationStart;
     std::string sourceFile;
     std::vector<std::string> keyWord;
     std::vector<std::string> token;
     std::vector<Symbol*> myTable;
     bool compareWithVector(const std::string& , const std::vector<std::string>& );
     void cleanTable();
+    
     Types type;
     void removeFromVector(int);
 };

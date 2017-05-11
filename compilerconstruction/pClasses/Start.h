@@ -5,17 +5,15 @@
 #ifndef COMPILERCONSTRUCTION_START_H
 #define COMPILERCONSTRUCTION_START_H
 
-#include <String>
-#include <cstdlib>
-#include "../Symbol.h"
-#include "../Types.h"
+#include "../TreePart.h"
 #include "PackageClause.h"
+#include "ImportDeclaration.h"
 
 using namespace std;
 
-class Start {
+class Start : public TreePart {
 public:
-    Start(vector<Symbol*>* table);
+    Start();
 
 };
 

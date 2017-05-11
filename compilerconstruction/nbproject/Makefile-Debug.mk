@@ -36,9 +36,14 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 # Object Files
 OBJECTFILES= \
 	${OBJECTDIR}/Symbol.o \
+	${OBJECTDIR}/TreePart.o \
 	${OBJECTDIR}/Types.o \
 	${OBJECTDIR}/lexxer.o \
-	${OBJECTDIR}/main.o
+	${OBJECTDIR}/main.o \
+	${OBJECTDIR}/pClasses/ImportDeclaration.o \
+	${OBJECTDIR}/pClasses/PackageClause.o \
+	${OBJECTDIR}/pClasses/Start.o \
+	${OBJECTDIR}/parser.o
 
 
 # C Compiler Flags
@@ -70,6 +75,11 @@ ${OBJECTDIR}/Symbol.o: Symbol.cpp
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Symbol.o Symbol.cpp
 
+${OBJECTDIR}/TreePart.o: TreePart.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/TreePart.o TreePart.cpp
+
 ${OBJECTDIR}/Types.o: Types.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
@@ -84,6 +94,26 @@ ${OBJECTDIR}/main.o: main.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/main.o main.cpp
+
+${OBJECTDIR}/pClasses/ImportDeclaration.o: pClasses/ImportDeclaration.cpp
+	${MKDIR} -p ${OBJECTDIR}/pClasses
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/pClasses/ImportDeclaration.o pClasses/ImportDeclaration.cpp
+
+${OBJECTDIR}/pClasses/PackageClause.o: pClasses/PackageClause.cpp
+	${MKDIR} -p ${OBJECTDIR}/pClasses
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/pClasses/PackageClause.o pClasses/PackageClause.cpp
+
+${OBJECTDIR}/pClasses/Start.o: pClasses/Start.cpp
+	${MKDIR} -p ${OBJECTDIR}/pClasses
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/pClasses/Start.o pClasses/Start.cpp
+
+${OBJECTDIR}/parser.o: parser.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/parser.o parser.cpp
 
 # Subprojects
 .build-subprojects:

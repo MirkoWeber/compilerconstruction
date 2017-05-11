@@ -1,17 +1,12 @@
 #ifndef COMPILERCONSTRUCTION_IMPORTDECLARATION_H
 #define COMPILERCONSTRUCTION_IMPORTDECLARATION_H
 
-#include <String>
-#include <cstdlib>
-#include "../Symbol.h"
-
+#include "../TreePart.h"
 using namespace std;
 
-class ImportDeclaration {
+class ImportDeclaration : public TreePart {
 public:
-    ImportDeclaration(Symbol sym);
-private:
-    Symbol symbol;
+    ImportDeclaration();
 };
 
 

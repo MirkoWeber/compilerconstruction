@@ -1,12 +1,20 @@
 #include "Start.h"
 
 
-Start::Start(vector<Symbol*>* table){
+Start::Start() : TreePart(){
     Types types;
-
-    if(table->at(0)->getType() == types.keyword){
-        if(table->at(0)->getValue() == "Package"){
-            PackageClause packageClause = PackageClause(*table->at(0));
-        }
+    lexxer myLex = lexxer(); 
+    symbol = myLex.next();
+    if(symbol->getType() == types.keyword && symbol->getValue() == "package" ){
+            PackageClause packageClause = PackageClause();
     }
+    else {
+       cout << "ERR: No package clause found";
+       exit(123); // package name is mandatory
+    }
+    symbol = myLex.next();
+    if(symbol->getType() == types.keyword && symbol->getValue() == "import"){
+            ImportDeclaration importDecl = ImportDeclaration();
+    }
+    symbol = myLex.next();
 }

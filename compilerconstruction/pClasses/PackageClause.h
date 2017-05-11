@@ -5,18 +5,12 @@
 #ifndef COMPILERCONSTRUCTION_PACKAGECLAUSE_H
 #define COMPILERCONSTRUCTION_PACKAGECLAUSE_H
 
-#include <String>
-#include <cstdlib>
-#include "../Symbol.h"
-#include "../Types.h"
+#include "../TreePart.h"
 
-using namespace std;
 
-class PackageClause {
+class PackageClause : public TreePart{
 public:
-    PackageClause(Symbol symbol);
-private:
-    Symbol symbol;
+    PackageClause() ;
 };
 
 

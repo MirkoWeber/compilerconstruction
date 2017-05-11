@@ -10,12 +10,15 @@
 class lexxer {
 public:
     lexxer();
+    lexxer(const std::string& );
     lexxer(const lexxer& orig);
     virtual ~lexxer();
-    nextToken();
-    vector<Symbol*>* lex();
+    void lex();
+    void print();
     Symbol* next();
 private:
+    static int iSymbol;
+    static std::vector<Symbol*> myTable;
     bool stringStart;
     int iChar;
     int iLine;
@@ -24,7 +27,7 @@ private:
     std::string sourceFile;
     std::vector<std::string> keyWord;
     std::vector<std::string> token;
-    std::vector<Symbol*> myTable;
+    
     bool compareWithVector(const std::string& , const std::vector<std::string>& );
     void cleanTable();
     

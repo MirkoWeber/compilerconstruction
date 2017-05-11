@@ -19,7 +19,6 @@
 
 class Symbol {
 public:
-    
     Symbol();
     Symbol(std::string , std::string , int , int );
     Symbol(const Symbol& orig);

@@ -1,13 +1,13 @@
-// Grammatik Start
+﻿// Grammatik Start
 
 S -> PC ID PB | PC PB
 PC -> keyword"Package" identifier
 ID -> keyword"import" string
-PB -> FN
-FN -> keyword"func" identifier '(' ')' '{' FB '}'
-FB -> identifier '=' AE | keyword"if" LE ST | identifier FC | ';' FB | null 
+PB -> FD 
+FD -> keyword"func" identifier '(' AG '{' ST '}'
+ST -> identifier'='AE | keyword"if" '(' LE | identifier FC | ';'ST | null 
 
-FC -> '.' identifier FC |  '(' AG 
+FC -> '.'identifier FC |  '(' AG 
 AG -> identifier AG' | const AG' | ')'
 AG' -> ',' AG 
 
@@ -19,7 +19,7 @@ FA -> '(' AE ')' | identifier | constant
 
 // Grammatik Ende
 
-// nur für lexxer
+// ////////////////////////////////////////////////nur für lexxer
 
 string = "{letter | number}" 
 identifier = letter { letter | number }

@@ -3,12 +3,13 @@
 
 #include <cstdlib>
 #include "Symbol.h"
+#include "lexxer.h"
 
 using namespace std;
 
 class parser {
 public:
-    parser(vector<Symbol*>* table);
+    parser();
 
 private:
 

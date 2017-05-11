@@ -41,7 +41,7 @@ lexxer::lexxer() {
     keyWord.push_back("import");
     keyWord.push_back("func");
     
-    ifstream fs("helloworld.go");
+    ifstream fs("C:\\Users\\raynn\\Desktop\\compilerconstruction\\compilerconstruction\\helloworld.go");
     
     if(fs.is_open()){
         sourceFile.assign((std::istreambuf_iterator<char>(fs)),

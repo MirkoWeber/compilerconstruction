@@ -10,6 +10,6 @@ set(SOURCE_FILES
         Symbol.cpp
         Symbol.h
         Types.cpp
-        Types.h)
+        Types.h parser.cpp parser.h pClasses/PackageClause.cpp pClasses/PackageClause.h pClasses/ImportDeclaration.cpp pClasses/ImportDeclaration.h pClasses/Start.cpp pClasses/Start.h)
 
 add_executable(compilerconstruction ${SOURCE_FILES})

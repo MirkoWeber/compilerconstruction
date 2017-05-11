@@ -231,6 +231,114 @@ main.cpp.s:
 	$(MAKE) -f CMakeFiles/compilerconstruction.dir/build.make CMakeFiles/compilerconstruction.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+pClasses/ImportDeclaration.o: pClasses/ImportDeclaration.cpp.o
+
+.PHONY : pClasses/ImportDeclaration.o
+
+# target to build an object file
+pClasses/ImportDeclaration.cpp.o:
+	$(MAKE) -f CMakeFiles/compilerconstruction.dir/build.make CMakeFiles/compilerconstruction.dir/pClasses/ImportDeclaration.cpp.o
+.PHONY : pClasses/ImportDeclaration.cpp.o
+
+pClasses/ImportDeclaration.i: pClasses/ImportDeclaration.cpp.i
+
+.PHONY : pClasses/ImportDeclaration.i
+
+# target to preprocess a source file
+pClasses/ImportDeclaration.cpp.i:
+	$(MAKE) -f CMakeFiles/compilerconstruction.dir/build.make CMakeFiles/compilerconstruction.dir/pClasses/ImportDeclaration.cpp.i
+.PHONY : pClasses/ImportDeclaration.cpp.i
+
+pClasses/ImportDeclaration.s: pClasses/ImportDeclaration.cpp.s
+
+.PHONY : pClasses/ImportDeclaration.s
+
+# target to generate assembly for a file
+pClasses/ImportDeclaration.cpp.s:
+	$(MAKE) -f CMakeFiles/compilerconstruction.dir/build.make CMakeFiles/compilerconstruction.dir/pClasses/ImportDeclaration.cpp.s
+.PHONY : pClasses/ImportDeclaration.cpp.s
+
+pClasses/PackageClause.o: pClasses/PackageClause.cpp.o
+
+.PHONY : pClasses/PackageClause.o
+
+# target to build an object file
+pClasses/PackageClause.cpp.o:
+	$(MAKE) -f CMakeFiles/compilerconstruction.dir/build.make CMakeFiles/compilerconstruction.dir/pClasses/PackageClause.cpp.o
+.PHONY : pClasses/PackageClause.cpp.o
+
+pClasses/PackageClause.i: pClasses/PackageClause.cpp.i
+
+.PHONY : pClasses/PackageClause.i
+
+# target to preprocess a source file
+pClasses/PackageClause.cpp.i:
+	$(MAKE) -f CMakeFiles/compilerconstruction.dir/build.make CMakeFiles/compilerconstruction.dir/pClasses/PackageClause.cpp.i
+.PHONY : pClasses/PackageClause.cpp.i
+
+pClasses/PackageClause.s: pClasses/PackageClause.cpp.s
+
+.PHONY : pClasses/PackageClause.s
+
+# target to generate assembly for a file
+pClasses/PackageClause.cpp.s:
+	$(MAKE) -f CMakeFiles/compilerconstruction.dir/build.make CMakeFiles/compilerconstruction.dir/pClasses/PackageClause.cpp.s
+.PHONY : pClasses/PackageClause.cpp.s
+
+pClasses/Start.o: pClasses/Start.cpp.o
+
+.PHONY : pClasses/Start.o
+
+# target to build an object file
+pClasses/Start.cpp.o:
+	$(MAKE) -f CMakeFiles/compilerconstruction.dir/build.make CMakeFiles/compilerconstruction.dir/pClasses/Start.cpp.o
+.PHONY : pClasses/Start.cpp.o
+
+pClasses/Start.i: pClasses/Start.cpp.i
+
+.PHONY : pClasses/Start.i
+
+# target to preprocess a source file
+pClasses/Start.cpp.i:
+	$(MAKE) -f CMakeFiles/compilerconstruction.dir/build.make CMakeFiles/compilerconstruction.dir/pClasses/Start.cpp.i
+.PHONY : pClasses/Start.cpp.i
+
+pClasses/Start.s: pClasses/Start.cpp.s
+
+.PHONY : pClasses/Start.s
+
+# target to generate assembly for a file
+pClasses/Start.cpp.s:
+	$(MAKE) -f CMakeFiles/compilerconstruction.dir/build.make CMakeFiles/compilerconstruction.dir/pClasses/Start.cpp.s
+.PHONY : pClasses/Start.cpp.s
+
+parser.o: parser.cpp.o
+
+.PHONY : parser.o
+
+# target to build an object file
+parser.cpp.o:
+	$(MAKE) -f CMakeFiles/compilerconstruction.dir/build.make CMakeFiles/compilerconstruction.dir/parser.cpp.o
+.PHONY : parser.cpp.o
+
+parser.i: parser.cpp.i
+
+.PHONY : parser.i
+
+# target to preprocess a source file
+parser.cpp.i:
+	$(MAKE) -f CMakeFiles/compilerconstruction.dir/build.make CMakeFiles/compilerconstruction.dir/parser.cpp.i
+.PHONY : parser.cpp.i
+
+parser.s: parser.cpp.s
+
+.PHONY : parser.s
+
+# target to generate assembly for a file
+parser.cpp.s:
+	$(MAKE) -f CMakeFiles/compilerconstruction.dir/build.make CMakeFiles/compilerconstruction.dir/parser.cpp.s
+.PHONY : parser.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -252,6 +360,18 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... pClasses/ImportDeclaration.o"
+	@echo "... pClasses/ImportDeclaration.i"
+	@echo "... pClasses/ImportDeclaration.s"
+	@echo "... pClasses/PackageClause.o"
+	@echo "... pClasses/PackageClause.i"
+	@echo "... pClasses/PackageClause.s"
+	@echo "... pClasses/Start.o"
+	@echo "... pClasses/Start.i"
+	@echo "... pClasses/Start.s"
+	@echo "... parser.o"
+	@echo "... parser.i"
+	@echo "... parser.s"
 .PHONY : help
 
 

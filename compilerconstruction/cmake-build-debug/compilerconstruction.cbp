@@ -101,6 +101,30 @@
 		<Unit filename="/cygdrive/c/Users/raynn/Desktop/compilerconstruction/compilerconstruction/main.cpp">
 			<Option target="compilerconstruction"/>
 		</Unit>
+		<Unit filename="/cygdrive/c/Users/raynn/Desktop/compilerconstruction/compilerconstruction/pClasses/ImportDeclaration.cpp">
+			<Option target="compilerconstruction"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/raynn/Desktop/compilerconstruction/compilerconstruction/pClasses/ImportDeclaration.h">
+			<Option target="compilerconstruction"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/raynn/Desktop/compilerconstruction/compilerconstruction/pClasses/PackageClause.cpp">
+			<Option target="compilerconstruction"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/raynn/Desktop/compilerconstruction/compilerconstruction/pClasses/PackageClause.h">
+			<Option target="compilerconstruction"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/raynn/Desktop/compilerconstruction/compilerconstruction/pClasses/Start.cpp">
+			<Option target="compilerconstruction"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/raynn/Desktop/compilerconstruction/compilerconstruction/pClasses/Start.h">
+			<Option target="compilerconstruction"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/raynn/Desktop/compilerconstruction/compilerconstruction/parser.cpp">
+			<Option target="compilerconstruction"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/raynn/Desktop/compilerconstruction/compilerconstruction/parser.h">
+			<Option target="compilerconstruction"/>
+		</Unit>
 		<Unit filename="/cygdrive/c/Users/raynn/Desktop/compilerconstruction/compilerconstruction/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>

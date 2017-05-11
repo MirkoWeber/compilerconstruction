@@ -65,7 +65,7 @@ lexxer::nextToken(){
     
 }
 
-void lexxer::lex(){
+vector<Symbol*>* lexxer::lex(){
     iLine = 0;
     string toGet ="";
     char cChar;
@@ -132,6 +132,8 @@ void lexxer::lex(){
     for(int i = 0 ; i < myTable.size() ; i ++){
         myTable.at(i)->print();
     }
+
+    return &myTable;
 }
 
 Symbol* lexxer::next(){ // do not use!

@@ -153,12 +153,112 @@ CMakeFiles/compilerconstruction.dir/Types.cpp.o.provides: CMakeFiles/compilercon
 CMakeFiles/compilerconstruction.dir/Types.cpp.o.provides.build: CMakeFiles/compilerconstruction.dir/Types.cpp.o
 
 
+CMakeFiles/compilerconstruction.dir/parser.cpp.o: CMakeFiles/compilerconstruction.dir/flags.make
+CMakeFiles/compilerconstruction.dir/parser.cpp.o: ../parser.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/cygdrive/c/Users/raynn/Desktop/compilerconstruction/compilerconstruction/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/compilerconstruction.dir/parser.cpp.o"
+	/usr/bin/c++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/compilerconstruction.dir/parser.cpp.o -c /cygdrive/c/Users/raynn/Desktop/compilerconstruction/compilerconstruction/parser.cpp
+
+CMakeFiles/compilerconstruction.dir/parser.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/compilerconstruction.dir/parser.cpp.i"
+	/usr/bin/c++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /cygdrive/c/Users/raynn/Desktop/compilerconstruction/compilerconstruction/parser.cpp > CMakeFiles/compilerconstruction.dir/parser.cpp.i
+
+CMakeFiles/compilerconstruction.dir/parser.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/compilerconstruction.dir/parser.cpp.s"
+	/usr/bin/c++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /cygdrive/c/Users/raynn/Desktop/compilerconstruction/compilerconstruction/parser.cpp -o CMakeFiles/compilerconstruction.dir/parser.cpp.s
+
+CMakeFiles/compilerconstruction.dir/parser.cpp.o.requires:
+
+.PHONY : CMakeFiles/compilerconstruction.dir/parser.cpp.o.requires
+
+CMakeFiles/compilerconstruction.dir/parser.cpp.o.provides: CMakeFiles/compilerconstruction.dir/parser.cpp.o.requires
+	$(MAKE) -f CMakeFiles/compilerconstruction.dir/build.make CMakeFiles/compilerconstruction.dir/parser.cpp.o.provides.build
+.PHONY : CMakeFiles/compilerconstruction.dir/parser.cpp.o.provides
+
+CMakeFiles/compilerconstruction.dir/parser.cpp.o.provides.build: CMakeFiles/compilerconstruction.dir/parser.cpp.o
+
+
+CMakeFiles/compilerconstruction.dir/pClasses/PackageClause.cpp.o: CMakeFiles/compilerconstruction.dir/flags.make
+CMakeFiles/compilerconstruction.dir/pClasses/PackageClause.cpp.o: ../pClasses/PackageClause.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/cygdrive/c/Users/raynn/Desktop/compilerconstruction/compilerconstruction/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/compilerconstruction.dir/pClasses/PackageClause.cpp.o"
+	/usr/bin/c++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/compilerconstruction.dir/pClasses/PackageClause.cpp.o -c /cygdrive/c/Users/raynn/Desktop/compilerconstruction/compilerconstruction/pClasses/PackageClause.cpp
+
+CMakeFiles/compilerconstruction.dir/pClasses/PackageClause.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/compilerconstruction.dir/pClasses/PackageClause.cpp.i"
+	/usr/bin/c++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /cygdrive/c/Users/raynn/Desktop/compilerconstruction/compilerconstruction/pClasses/PackageClause.cpp > CMakeFiles/compilerconstruction.dir/pClasses/PackageClause.cpp.i
+
+CMakeFiles/compilerconstruction.dir/pClasses/PackageClause.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/compilerconstruction.dir/pClasses/PackageClause.cpp.s"
+	/usr/bin/c++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /cygdrive/c/Users/raynn/Desktop/compilerconstruction/compilerconstruction/pClasses/PackageClause.cpp -o CMakeFiles/compilerconstruction.dir/pClasses/PackageClause.cpp.s
+
+CMakeFiles/compilerconstruction.dir/pClasses/PackageClause.cpp.o.requires:
+
+.PHONY : CMakeFiles/compilerconstruction.dir/pClasses/PackageClause.cpp.o.requires
+
+CMakeFiles/compilerconstruction.dir/pClasses/PackageClause.cpp.o.provides: CMakeFiles/compilerconstruction.dir/pClasses/PackageClause.cpp.o.requires
+	$(MAKE) -f CMakeFiles/compilerconstruction.dir/build.make CMakeFiles/compilerconstruction.dir/pClasses/PackageClause.cpp.o.provides.build
+.PHONY : CMakeFiles/compilerconstruction.dir/pClasses/PackageClause.cpp.o.provides
+
+CMakeFiles/compilerconstruction.dir/pClasses/PackageClause.cpp.o.provides.build: CMakeFiles/compilerconstruction.dir/pClasses/PackageClause.cpp.o
+
+
+CMakeFiles/compilerconstruction.dir/pClasses/ImportDeclaration.cpp.o: CMakeFiles/compilerconstruction.dir/flags.make
+CMakeFiles/compilerconstruction.dir/pClasses/ImportDeclaration.cpp.o: ../pClasses/ImportDeclaration.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/cygdrive/c/Users/raynn/Desktop/compilerconstruction/compilerconstruction/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/compilerconstruction.dir/pClasses/ImportDeclaration.cpp.o"
+	/usr/bin/c++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/compilerconstruction.dir/pClasses/ImportDeclaration.cpp.o -c /cygdrive/c/Users/raynn/Desktop/compilerconstruction/compilerconstruction/pClasses/ImportDeclaration.cpp
+
+CMakeFiles/compilerconstruction.dir/pClasses/ImportDeclaration.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/compilerconstruction.dir/pClasses/ImportDeclaration.cpp.i"
+	/usr/bin/c++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /cygdrive/c/Users/raynn/Desktop/compilerconstruction/compilerconstruction/pClasses/ImportDeclaration.cpp > CMakeFiles/compilerconstruction.dir/pClasses/ImportDeclaration.cpp.i
+
+CMakeFiles/compilerconstruction.dir/pClasses/ImportDeclaration.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/compilerconstruction.dir/pClasses/ImportDeclaration.cpp.s"
+	/usr/bin/c++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /cygdrive/c/Users/raynn/Desktop/compilerconstruction/compilerconstruction/pClasses/ImportDeclaration.cpp -o CMakeFiles/compilerconstruction.dir/pClasses/ImportDeclaration.cpp.s
+
+CMakeFiles/compilerconstruction.dir/pClasses/ImportDeclaration.cpp.o.requires:
+
+.PHONY : CMakeFiles/compilerconstruction.dir/pClasses/ImportDeclaration.cpp.o.requires
+
+CMakeFiles/compilerconstruction.dir/pClasses/ImportDeclaration.cpp.o.provides: CMakeFiles/compilerconstruction.dir/pClasses/ImportDeclaration.cpp.o.requires
+	$(MAKE) -f CMakeFiles/compilerconstruction.dir/build.make CMakeFiles/compilerconstruction.dir/pClasses/ImportDeclaration.cpp.o.provides.build
+.PHONY : CMakeFiles/compilerconstruction.dir/pClasses/ImportDeclaration.cpp.o.provides
+
+CMakeFiles/compilerconstruction.dir/pClasses/ImportDeclaration.cpp.o.provides.build: CMakeFiles/compilerconstruction.dir/pClasses/ImportDeclaration.cpp.o
+
+
+CMakeFiles/compilerconstruction.dir/pClasses/Start.cpp.o: CMakeFiles/compilerconstruction.dir/flags.make
+CMakeFiles/compilerconstruction.dir/pClasses/Start.cpp.o: ../pClasses/Start.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/cygdrive/c/Users/raynn/Desktop/compilerconstruction/compilerconstruction/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/compilerconstruction.dir/pClasses/Start.cpp.o"
+	/usr/bin/c++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/compilerconstruction.dir/pClasses/Start.cpp.o -c /cygdrive/c/Users/raynn/Desktop/compilerconstruction/compilerconstruction/pClasses/Start.cpp
+
+CMakeFiles/compilerconstruction.dir/pClasses/Start.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/compilerconstruction.dir/pClasses/Start.cpp.i"
+	/usr/bin/c++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /cygdrive/c/Users/raynn/Desktop/compilerconstruction/compilerconstruction/pClasses/Start.cpp > CMakeFiles/compilerconstruction.dir/pClasses/Start.cpp.i
+
+CMakeFiles/compilerconstruction.dir/pClasses/Start.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/compilerconstruction.dir/pClasses/Start.cpp.s"
+	/usr/bin/c++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /cygdrive/c/Users/raynn/Desktop/compilerconstruction/compilerconstruction/pClasses/Start.cpp -o CMakeFiles/compilerconstruction.dir/pClasses/Start.cpp.s
+
+CMakeFiles/compilerconstruction.dir/pClasses/Start.cpp.o.requires:
+
+.PHONY : CMakeFiles/compilerconstruction.dir/pClasses/Start.cpp.o.requires
+
+CMakeFiles/compilerconstruction.dir/pClasses/Start.cpp.o.provides: CMakeFiles/compilerconstruction.dir/pClasses/Start.cpp.o.requires
+	$(MAKE) -f CMakeFiles/compilerconstruction.dir/build.make CMakeFiles/compilerconstruction.dir/pClasses/Start.cpp.o.provides.build
+.PHONY : CMakeFiles/compilerconstruction.dir/pClasses/Start.cpp.o.provides
+
+CMakeFiles/compilerconstruction.dir/pClasses/Start.cpp.o.provides.build: CMakeFiles/compilerconstruction.dir/pClasses/Start.cpp.o
+
+
 # Object files for target compilerconstruction
 compilerconstruction_OBJECTS = \
 "CMakeFiles/compilerconstruction.dir/lexxer.cpp.o" \
 "CMakeFiles/compilerconstruction.dir/main.cpp.o" \
 "CMakeFiles/compilerconstruction.dir/Symbol.cpp.o" \
-"CMakeFiles/compilerconstruction.dir/Types.cpp.o"
+"CMakeFiles/compilerconstruction.dir/Types.cpp.o" \
+"CMakeFiles/compilerconstruction.dir/parser.cpp.o" \
+"CMakeFiles/compilerconstruction.dir/pClasses/PackageClause.cpp.o" \
+"CMakeFiles/compilerconstruction.dir/pClasses/ImportDeclaration.cpp.o" \
+"CMakeFiles/compilerconstruction.dir/pClasses/Start.cpp.o"
 
 # External object files for target compilerconstruction
 compilerconstruction_EXTERNAL_OBJECTS =
@@ -167,9 +267,13 @@ compilerconstruction.exe: CMakeFiles/compilerconstruction.dir/lexxer.cpp.o
 compilerconstruction.exe: CMakeFiles/compilerconstruction.dir/main.cpp.o
 compilerconstruction.exe: CMakeFiles/compilerconstruction.dir/Symbol.cpp.o
 compilerconstruction.exe: CMakeFiles/compilerconstruction.dir/Types.cpp.o
+compilerconstruction.exe: CMakeFiles/compilerconstruction.dir/parser.cpp.o
+compilerconstruction.exe: CMakeFiles/compilerconstruction.dir/pClasses/PackageClause.cpp.o
+compilerconstruction.exe: CMakeFiles/compilerconstruction.dir/pClasses/ImportDeclaration.cpp.o
+compilerconstruction.exe: CMakeFiles/compilerconstruction.dir/pClasses/Start.cpp.o
 compilerconstruction.exe: CMakeFiles/compilerconstruction.dir/build.make
 compilerconstruction.exe: CMakeFiles/compilerconstruction.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/cygdrive/c/Users/raynn/Desktop/compilerconstruction/compilerconstruction/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable compilerconstruction.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/cygdrive/c/Users/raynn/Desktop/compilerconstruction/compilerconstruction/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable compilerconstruction.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/compilerconstruction.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -181,6 +285,10 @@ CMakeFiles/compilerconstruction.dir/requires: CMakeFiles/compilerconstruction.di
 CMakeFiles/compilerconstruction.dir/requires: CMakeFiles/compilerconstruction.dir/main.cpp.o.requires
 CMakeFiles/compilerconstruction.dir/requires: CMakeFiles/compilerconstruction.dir/Symbol.cpp.o.requires
 CMakeFiles/compilerconstruction.dir/requires: CMakeFiles/compilerconstruction.dir/Types.cpp.o.requires
+CMakeFiles/compilerconstruction.dir/requires: CMakeFiles/compilerconstruction.dir/parser.cpp.o.requires
+CMakeFiles/compilerconstruction.dir/requires: CMakeFiles/compilerconstruction.dir/pClasses/PackageClause.cpp.o.requires
+CMakeFiles/compilerconstruction.dir/requires: CMakeFiles/compilerconstruction.dir/pClasses/ImportDeclaration.cpp.o.requires
+CMakeFiles/compilerconstruction.dir/requires: CMakeFiles/compilerconstruction.dir/pClasses/Start.cpp.o.requires
 
 .PHONY : CMakeFiles/compilerconstruction.dir/requires
 

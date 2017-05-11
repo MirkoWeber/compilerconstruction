@@ -28,6 +28,7 @@ public:
     std::string getType();
     std::string getValue();
     int getIChar();
+    int getLine();
 private:
     std::string type; 
     std::string value;

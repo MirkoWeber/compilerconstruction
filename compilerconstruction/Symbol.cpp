@@ -36,6 +36,9 @@ int Symbol::getIChar(){
     return iChar;
 }
 
+int Symbol::getLine() {
+    return line;
+}
 
 
 Symbol::Symbol() {

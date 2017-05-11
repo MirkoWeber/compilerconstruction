@@ -1,21 +1,30 @@
+// Grammatik Start
+
 S -> PC ID PB | PC PB
 PC -> keyword"Package" identifier
 ID -> keyword"import" string
 PB -> FN
 FN -> keyword"func" identifier '(' ')' '{' FB '}'
-FB -> identifier '=' AE | keyword"if" ?? | identifier FC | ';' FB | null 
-AE -> code von Taschenrechner Beispiel hier rein
+FB -> identifier '=' AE | keyword"if" LE ST | identifier FC | ';' FB | null 
+
 FC -> '.' identifier FC |  '(' AG 
 AG -> identifier AG' | const AG' | ')'
 AG' -> ',' AG 
 
+AE -> TE AE'		//Taschenrechner Beispiel
+AE' -> '+' TE AE' | null
+TE -> FA TE'
+TE' -> '*' FA TE' | null
+FA -> '(' AE ')' | identifier | constant
 
+// Grammatik Ende
 
 // nur für lexxer
 
 string = "{letter | number}" 
 identifier = letter { letter | number }
-tokens = ( | ) | ; | { | } | "
+tokens = ( | ) | ; | { | }
+
 
 keywords
 --------
@@ -23,3 +32,15 @@ keywords
 package
 import
 func
+
+PARSER, ToDo: 
+
+implement FIRST and FOLLOW function
+
+Table driven top down parsing Folie:
+Stack auf Zeile ist das Resultat der Aktion auf der selben Zeile!
+
+
+FOLLOW:
+Merke, FOLLOW(B) += FOLLOW(A) heißt in seinem Pseudocode, schauen ob es schon drin ist, wenn ja dann nicht hinzufügen!
+

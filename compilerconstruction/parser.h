@@ -4,14 +4,17 @@
 #include <cstdlib>
 #include "Symbol.h"
 #include "lexxer.h"
+#include "TreePart.h"
 
 using namespace std;
 
 class parser {
 public:
     parser();
+    void printTree(TreePart*);
 
 private:
+    TreePart* root;
 
 };
 

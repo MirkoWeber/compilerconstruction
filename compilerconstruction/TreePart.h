@@ -13,6 +13,8 @@ class TreePart {
 public:
     TreePart( Symbol* );
     TreePart();
+    Symbol* getSymbol();
+    vector<TreePart*>* getSon();
 protected:
     Symbol* symbol;
     std::vector<TreePart*> son;

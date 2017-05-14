@@ -9,6 +9,16 @@
 TreePart::TreePart(){
 }
 
+Symbol* TreePart::getSymbol(){
+    return symbol;
+}
+
+vector<TreePart*>* TreePart::getSon(){
+    
+    return &son;
+}
+
+
 TreePart::TreePart(Symbol* get){
     symbol = get;
     

@@ -2,6 +2,7 @@
 #include <iostream>
 
 PackageClause::PackageClause() : TreePart() {
+    typeName = "PackageClause";
     Types types = Types();
     lexxer myLexer = lexxer();
     symbol = myLexer.next();

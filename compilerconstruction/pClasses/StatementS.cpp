@@ -14,6 +14,7 @@
 #include "StatementS.h"
 
 StatementS::StatementS() : TreePart() {
+    typeName = "StatementS";
 }
 
 StatementS::StatementS(const StatementS& orig) {

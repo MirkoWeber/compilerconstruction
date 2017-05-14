@@ -14,6 +14,7 @@
 #include "ArithmeticExpression.h"
 
 ArithmeticExpression::ArithmeticExpression() : TreePart() {
+    typeName = "ArithmeticExpression";
 }
 
 ArithmeticExpression::ArithmeticExpression(const ArithmeticExpression& orig) {

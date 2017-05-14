@@ -18,6 +18,9 @@ vector<TreePart*>* TreePart::getSon(){
     return &son;
 }
 
+void TreePart::print(){
+    cout << typeName;
+}
 
 TreePart::TreePart(Symbol* get){
     symbol = get;

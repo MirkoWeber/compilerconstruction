@@ -4,6 +4,7 @@
 #include "Symbol.h"
 #include <String>
 #include <cstdlib>
+#include <iostream>
 #include "Symbol.h"
 #include "Types.h"
 #include "lexxer.h"
@@ -15,9 +16,11 @@ public:
     TreePart();
     Symbol* getSymbol();
     vector<TreePart*>* getSon();
+    void print();
 protected:
     Symbol* symbol;
     std::vector<TreePart*> son;
+    string typeName;
 };
 
 #endif /* LEXXER_H */

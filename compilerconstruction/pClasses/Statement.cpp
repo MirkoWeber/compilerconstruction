@@ -14,6 +14,7 @@
 #include "Statement.h"
 
 Statement::Statement() : TreePart() {
+    typeName = "Statement";
     Symbol* symbolTmp;
     Types types = Types();
     lexxer myLexer = lexxer();

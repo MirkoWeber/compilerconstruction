@@ -14,10 +14,12 @@
 #include "FunctionBlock.h"
 
 FunctionBlock::FunctionBlock() : TreePart() {
+    typeName = "FunctionBlock";
     Types types = Types();
     lexxer myLexer = lexxer();
     symbol = myLexer.next();
     //std::cout << symbol->getType();
+    
     if(symbol->getType() == types.token && symbol->getValue() == "("){
         son.push_back(new ArgumentList());
     } else {

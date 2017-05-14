@@ -15,6 +15,7 @@
 #include "../TreePart.h"
 
 FunctionDeclaration::FunctionDeclaration() : TreePart() {
+    typeName = "FunctionDeclaration";
     Types types = Types();
     lexxer myLexer = lexxer();
     symbol = myLexer.next();

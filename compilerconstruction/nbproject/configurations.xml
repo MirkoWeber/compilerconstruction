@@ -4,9 +4,19 @@
     <logicalFolder name="HeaderFiles"
                    displayName="Header Files"
                    projectFiles="true">
+      <itemPath>pClasses/ArgumentList.h</itemPath>
+      <itemPath>pClasses/ArgumentListDecl.h</itemPath>
+      <itemPath>pClasses/ArgumentListDeclS.h</itemPath>
+      <itemPath>pClasses/ArgumentListS.h</itemPath>
+      <itemPath>pClasses/ArithmeticExpression.h</itemPath>
+      <itemPath>pClasses/FunctionBlock.h</itemPath>
+      <itemPath>pClasses/FunctionCall.h</itemPath>
+      <itemPath>pClasses/FunctionDeclaration.h</itemPath>
       <itemPath>pClasses/ImportDeclaration.h</itemPath>
       <itemPath>pClasses/PackageClause.h</itemPath>
       <itemPath>pClasses/Start.h</itemPath>
+      <itemPath>pClasses/Statement.h</itemPath>
+      <itemPath>pClasses/StatementS.h</itemPath>
       <itemPath>Symbol.h</itemPath>
       <itemPath>TreePart.h</itemPath>
       <itemPath>Types.h</itemPath>
@@ -20,9 +30,19 @@
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
+      <itemPath>pClasses/ArgumentList.cpp</itemPath>
+      <itemPath>pClasses/ArgumentListDecl.cpp</itemPath>
+      <itemPath>pClasses/ArgumentListDeclS.cpp</itemPath>
+      <itemPath>pClasses/ArgumentListS.cpp</itemPath>
+      <itemPath>pClasses/ArithmeticExpression.cpp</itemPath>
+      <itemPath>pClasses/FunctionBlock.cpp</itemPath>
+      <itemPath>pClasses/FunctionCall.cpp</itemPath>
+      <itemPath>pClasses/FunctionDeclaration.cpp</itemPath>
       <itemPath>pClasses/ImportDeclaration.cpp</itemPath>
       <itemPath>pClasses/PackageClause.cpp</itemPath>
       <itemPath>pClasses/Start.cpp</itemPath>
+      <itemPath>pClasses/Statement.cpp</itemPath>
+      <itemPath>pClasses/StatementS.cpp</itemPath>
       <itemPath>Symbol.cpp</itemPath>
       <itemPath>TreePart.cpp</itemPath>
       <itemPath>Types.cpp</itemPath>
@@ -70,6 +90,38 @@
       </item>
       <item path="main.cpp" ex="false" tool="1" flavor2="0">
       </item>
+      <item path="pClasses/ArgumentList.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="pClasses/ArgumentList.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="pClasses/ArgumentListDecl.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="pClasses/ArgumentListDecl.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="pClasses/ArgumentListDeclS.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="pClasses/ArgumentListDeclS.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="pClasses/ArgumentListS.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="pClasses/ArgumentListS.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="pClasses/ArithmeticExpression.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="pClasses/ArithmeticExpression.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="pClasses/FunctionBlock.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="pClasses/FunctionBlock.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="pClasses/FunctionCall.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="pClasses/FunctionCall.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="pClasses/FunctionDeclaration.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="pClasses/FunctionDeclaration.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="pClasses/ImportDeclaration.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="pClasses/ImportDeclaration.h" ex="false" tool="3" flavor2="0">
@@ -81,6 +133,14 @@
       <item path="pClasses/Start.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="pClasses/Start.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="pClasses/Statement.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="pClasses/Statement.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="pClasses/StatementS.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="pClasses/StatementS.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="parser.cpp" ex="false" tool="1" flavor2="0">
       </item>
@@ -125,6 +185,38 @@
       </item>
       <item path="main.cpp" ex="false" tool="1" flavor2="0">
       </item>
+      <item path="pClasses/ArgumentList.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="pClasses/ArgumentList.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="pClasses/ArgumentListDecl.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="pClasses/ArgumentListDecl.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="pClasses/ArgumentListDeclS.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="pClasses/ArgumentListDeclS.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="pClasses/ArgumentListS.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="pClasses/ArgumentListS.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="pClasses/ArithmeticExpression.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="pClasses/ArithmeticExpression.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="pClasses/FunctionBlock.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="pClasses/FunctionBlock.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="pClasses/FunctionCall.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="pClasses/FunctionCall.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="pClasses/FunctionDeclaration.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="pClasses/FunctionDeclaration.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="pClasses/ImportDeclaration.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="pClasses/ImportDeclaration.h" ex="false" tool="3" flavor2="0">
@@ -136,6 +228,14 @@
       <item path="pClasses/Start.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="pClasses/Start.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="pClasses/Statement.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="pClasses/Statement.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="pClasses/StatementS.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="pClasses/StatementS.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="parser.cpp" ex="false" tool="1" flavor2="0">
       </item>

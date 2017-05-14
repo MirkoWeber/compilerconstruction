@@ -13,13 +13,23 @@
 
 #include "Types.h"
 
+string Types::token = "token";
+string Types::constantString = "constString";
+string Types::keyword = "keyword";
+string Types::constantNumeric = "constNumeric";
+string Types::identifier = "identifier";
+string Types::identifierDeclInt = "identifierDeclarationInteger";
+string Types::identifierDeclBool = "identifierDeclarationBoolean";
+string Types::package = "package";
+string Types::import = "import";
+string Types::func = "func";
+string Types::integer = "int";
+string Types::boolean = "bool";
+
 Types::Types() {
-    token = "token";
-    constantString = "constString";
-    keyword = "keyword";
-    constantNumeric = "constNumeric";
-    identifier = "identifier";
 }
+
+
 
 Types::Types(const Types& orig) {
 }

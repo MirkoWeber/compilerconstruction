@@ -16,6 +16,7 @@ public:
     void lex();
     void print();
     Symbol* next();
+    Symbol* preview();
 private:
     static int iSymbol;
     static std::vector<Symbol*> myTable;

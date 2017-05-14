@@ -8,6 +8,7 @@
 #include "../TreePart.h"
 #include "PackageClause.h"
 #include "ImportDeclaration.h"
+#include "FunctionDeclaration.h"
 
 using namespace std;
 

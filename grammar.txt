@@ -5,16 +5,20 @@ PC -> keyword"Package" identifier
 ID -> keyword"import" string
 PB -> FD 
 FD -> keyword"func" identifier '(' AG '{' ST '}'
-ST -> identifier'='AE | keyword"if" '(' LE | identifier FC | ';'ST | null 
+ST -> identifier'='AE ST' | keyword"if" '(' LE ST' | identifier FC ST' | null 
+ST'-> ST | null
 
-FC -> '.'identifier FC |  '(' AG 
-AG -> identifier AG' | const AG' | ')'
-AG' -> ',' AG 
+FC -> '.'identifier FC |  '(' AGC
+AG -> identifierDecl AG' | ')'
+AG'-> ',' AG | ')'
+
+AGC -> identifier AGC' | const AGC' | ')'
+AGC'-> ',' AGC | ')'
 
 AE -> TE AE'		//Taschenrechner Beispiel
-AE' -> '+' TE AE' | null
+AE'-> '+' TE AE' | null
 TE -> FA TE'
-TE' -> '*' FA TE' | null
+TE'-> '*' FA TE' | null
 FA -> '(' AE ')' | identifier | constant
 
 // Grammatik Ende
@@ -23,7 +27,8 @@ FA -> '(' AE ')' | identifier | constant
 
 string = "{letter | number}" 
 identifier = letter { letter | number }
-tokens = ( | ) | ; | { | }
+identifierDecl = identifier vType
+tokens = ( | ) | ; | { | } | ,
 
 
 keywords

@@ -22,11 +22,18 @@ public:
     Types();
     Types(const Types& orig);
     virtual ~Types();
-    string token;
-    string constantString;
-    string keyword;
-    string constantNumeric;
-    string identifier;
+    static string token;
+    static string constantString;
+    static string keyword;
+    static string constantNumeric;
+    static string identifier;
+    static string package;
+    static string import;
+    static string func;
+    static string identifierDeclInt;
+    static string identifierDeclBool;
+    static string integer;
+    static string boolean;
 private:
 
 };

@@ -40,9 +40,19 @@ OBJECTFILES= \
 	${OBJECTDIR}/Types.o \
 	${OBJECTDIR}/lexxer.o \
 	${OBJECTDIR}/main.o \
+	${OBJECTDIR}/pClasses/ArgumentList.o \
+	${OBJECTDIR}/pClasses/ArgumentListDecl.o \
+	${OBJECTDIR}/pClasses/ArgumentListDeclS.o \
+	${OBJECTDIR}/pClasses/ArgumentListS.o \
+	${OBJECTDIR}/pClasses/ArithmeticExpression.o \
+	${OBJECTDIR}/pClasses/FunctionBlock.o \
+	${OBJECTDIR}/pClasses/FunctionCall.o \
+	${OBJECTDIR}/pClasses/FunctionDeclaration.o \
 	${OBJECTDIR}/pClasses/ImportDeclaration.o \
 	${OBJECTDIR}/pClasses/PackageClause.o \
 	${OBJECTDIR}/pClasses/Start.o \
+	${OBJECTDIR}/pClasses/Statement.o \
+	${OBJECTDIR}/pClasses/StatementS.o \
 	${OBJECTDIR}/parser.o
 
 
@@ -95,6 +105,46 @@ ${OBJECTDIR}/main.o: main.cpp
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/main.o main.cpp
 
+${OBJECTDIR}/pClasses/ArgumentList.o: pClasses/ArgumentList.cpp
+	${MKDIR} -p ${OBJECTDIR}/pClasses
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/pClasses/ArgumentList.o pClasses/ArgumentList.cpp
+
+${OBJECTDIR}/pClasses/ArgumentListDecl.o: pClasses/ArgumentListDecl.cpp
+	${MKDIR} -p ${OBJECTDIR}/pClasses
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/pClasses/ArgumentListDecl.o pClasses/ArgumentListDecl.cpp
+
+${OBJECTDIR}/pClasses/ArgumentListDeclS.o: pClasses/ArgumentListDeclS.cpp
+	${MKDIR} -p ${OBJECTDIR}/pClasses
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/pClasses/ArgumentListDeclS.o pClasses/ArgumentListDeclS.cpp
+
+${OBJECTDIR}/pClasses/ArgumentListS.o: pClasses/ArgumentListS.cpp
+	${MKDIR} -p ${OBJECTDIR}/pClasses
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/pClasses/ArgumentListS.o pClasses/ArgumentListS.cpp
+
+${OBJECTDIR}/pClasses/ArithmeticExpression.o: pClasses/ArithmeticExpression.cpp
+	${MKDIR} -p ${OBJECTDIR}/pClasses
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/pClasses/ArithmeticExpression.o pClasses/ArithmeticExpression.cpp
+
+${OBJECTDIR}/pClasses/FunctionBlock.o: pClasses/FunctionBlock.cpp
+	${MKDIR} -p ${OBJECTDIR}/pClasses
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/pClasses/FunctionBlock.o pClasses/FunctionBlock.cpp
+
+${OBJECTDIR}/pClasses/FunctionCall.o: pClasses/FunctionCall.cpp
+	${MKDIR} -p ${OBJECTDIR}/pClasses
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/pClasses/FunctionCall.o pClasses/FunctionCall.cpp
+
+${OBJECTDIR}/pClasses/FunctionDeclaration.o: pClasses/FunctionDeclaration.cpp
+	${MKDIR} -p ${OBJECTDIR}/pClasses
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/pClasses/FunctionDeclaration.o pClasses/FunctionDeclaration.cpp
+
 ${OBJECTDIR}/pClasses/ImportDeclaration.o: pClasses/ImportDeclaration.cpp
 	${MKDIR} -p ${OBJECTDIR}/pClasses
 	${RM} "$@.d"
@@ -109,6 +159,16 @@ ${OBJECTDIR}/pClasses/Start.o: pClasses/Start.cpp
 	${MKDIR} -p ${OBJECTDIR}/pClasses
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/pClasses/Start.o pClasses/Start.cpp
+
+${OBJECTDIR}/pClasses/Statement.o: pClasses/Statement.cpp
+	${MKDIR} -p ${OBJECTDIR}/pClasses
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/pClasses/Statement.o pClasses/Statement.cpp
+
+${OBJECTDIR}/pClasses/StatementS.o: pClasses/StatementS.cpp
+	${MKDIR} -p ${OBJECTDIR}/pClasses
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/pClasses/StatementS.o pClasses/StatementS.cpp
 
 ${OBJECTDIR}/parser.o: parser.cpp
 	${MKDIR} -p ${OBJECTDIR}

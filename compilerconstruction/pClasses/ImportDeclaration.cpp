@@ -4,6 +4,7 @@ ImportDeclaration::ImportDeclaration() : TreePart() {
     Types types = Types();
     lexxer myLexer = lexxer();
     symbol = myLexer.next();
+    //std::cout << symbol->getType();
     if(symbol->getType() == types.constantString){
     } else {
         int line = symbol->getLine();

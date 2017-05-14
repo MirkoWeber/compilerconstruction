@@ -15,6 +15,7 @@ public:
     TreePart();
 protected:
     Symbol* symbol;
+    std::vector<TreePart*> son;
 };
 
 #endif /* LEXXER_H */

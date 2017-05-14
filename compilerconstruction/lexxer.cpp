@@ -40,11 +40,13 @@ lexxer::lexxer( const string &filePath) {
     token.push_back("-");
     token.push_back("/");
     token.push_back("*");
+    token.push_back(",");
     token.push_back(gans);
-    keyWord.push_back("package");
-    keyWord.push_back("import");
-    keyWord.push_back("func");
-    
+    keyWord.push_back(type.package);
+    keyWord.push_back(type.import);
+    keyWord.push_back(type.func);
+    keyWord.push_back(type.integer);
+    keyWord.push_back(type.boolean);
     ifstream fs(filePath.c_str());
     
     if(fs.is_open()){
@@ -142,11 +144,19 @@ void lexxer::print(){
 Symbol* lexxer::next(){ 
     iSymbol++;
     if(iSymbol >= myTable.size() ){
-        Symbol* errorSym;
-        errorSym = new Symbol( "eof" , "eof" , -1 , -1 );
-        return errorSym;
+        return NULL;
     }
     return myTable.at(iSymbol);
+    
+}
+
+Symbol* lexxer::preview(){ 
+    int iSym = iSymbol;
+    iSym++;
+    if(iSym >= myTable.size() ){
+        return NULL;
+    }
+    return myTable.at(iSym);
     
 }
 
@@ -168,6 +178,22 @@ void lexxer::cleanTable(){
                 removeFromVector(i);
                 continue;
             }
+        }
+    }
+    for( int i = myTable.size() - 1 ; i >= 0 ; i-- ){
+        if( i - 1 >= 0 ){
+            if(myTable.at(i - 1)->getType().compare(type.identifier) == 0 && myTable.at(i)->getType().compare(type.keyword) == 0 && 
+                        myTable.at(i)->getValue().compare(type.integer) == 0  ) 
+            {
+                myTable.at(i - 1) = new Symbol(myTable.at(i - 1)->getValue() , type.identifierDeclInt , myTable.at(i - 1)->getIChar() , myTable.at(i - 1)->getLine());
+                removeFromVector(i);
+            }
+            if(myTable.at(i - 1)->getType().compare(type.identifier) == 0 && myTable.at(i)->getType().compare(type.keyword) == 0 && 
+                        myTable.at(i)->getValue().compare(type.boolean) == 0 ) {
+                myTable.at(i - 1) = new Symbol(myTable.at(i - 1)->getValue() , type.identifierDeclBool , myTable.at(i - 1)->getIChar() , myTable.at(i - 1)->getLine());
+                removeFromVector(i);               
+            }
+            
         }
     }
 }

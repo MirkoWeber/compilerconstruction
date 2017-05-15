@@ -1,6 +1,7 @@
 
 #include "parser.h"
 #include "pClasses/Start.h"
+#include <cstdlib>
 
 parser::parser(){
     
@@ -18,8 +19,10 @@ void parser::printTree(TreePart* start){
     son = start->getSon();
     if( son->size() > 0 ){
         for( int i = 0 ; i < son->size() ; i++){
-            cout << i << " son of me\n";
-            printTree(son->at(i));
+            if(son->at(i)!=NULL){
+                cout << i << " son of me\n";
+                printTree(son->at(i));
+            }
         }
     }
     

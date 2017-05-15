@@ -29,9 +29,9 @@ FunctionBlock::FunctionBlock() : TreePart() {
     }
     symbol = myLexer.next();
     if(symbol->getType() == types.token && symbol->getValue() == "{"){
-        while(myLexer.preview()->getType() != types. token && myLexer.preview()->getType() != "}"){
-            son.push_back(new Statement());
-        }
+        //while(myLexer.preview()->getType() != types. token && myLexer.preview()->getType() != "}"){
+        son.push_back(new Statement());
+        //}
     }else {
         int line = symbol->getLine();
         std::cout << "ERR: Function Block starting with '{' expected at Line: " << line;

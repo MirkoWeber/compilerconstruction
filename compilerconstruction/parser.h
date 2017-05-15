@@ -15,7 +15,7 @@ public:
 
 private:
     TreePart* root;
-
+    int getDepth();
 };
 
 

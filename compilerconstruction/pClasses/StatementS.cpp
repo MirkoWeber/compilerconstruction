@@ -12,9 +12,17 @@
  */
 
 #include "StatementS.h"
+#include "Statement.h"
 
 StatementS::StatementS() : TreePart() {
     typeName = "StatementS";
+    Symbol* symbolTmp;
+    Types types = Types();
+    lexxer myLexer = lexxer();
+    symbol = myLexer.next();
+    son.push_back(new Statement());
+
+        
 }
 
 StatementS::StatementS(const StatementS& orig) {

@@ -28,10 +28,14 @@ Statement::Statement() : TreePart() {
             son.push_back(new FunctionCall());
         }
         
-    } else {
+        
+    } else if(symbol->getType() == types.identifierDeclBool || symbol->getType() == types.identifierDeclInt){
+        symbolTmp = myLexer.preview();
+    }
+    if(myLexer.preview()->getValue() != "}" ) son.push_back(new Statement());
         
     
-    }
+    
 }
 
 Statement::Statement(const Statement& orig) {

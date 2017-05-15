@@ -80,6 +80,11 @@ void lexxer::lex(){
         iChar = i;
         cChar = sourceFile.at(i);
         cCharString = cChar;
+<<<<<<< HEAD
+=======
+        //if(cChar == ' ') continue;
+        
+>>>>>>> origin/master
         if (compareWithVector( cCharString, token )) {
             if(cChar == '\n'){
                 iLine++;

@@ -1,11 +1,11 @@
 ﻿// Grammatik Start
 
-S -> PC ID PB | PC PB
+S -> PC ID PB 
 PC -> keyword"Package" identifier
-ID -> keyword"import" string
+ID -> keyword"import" string | null
 PB -> FD 
 FD -> keyword"func" identifier '(' AG '{' ST '}'
-ST -> identifier'='AE ST' | keyword"if" '(' LE ST' | identifier FC ST' | null 
+ST -> identifier'='AE ST' | keyword"if" '(' LE ST' | identifier FC ST' | identifierDecl | null 
 ST'-> ST | null
 
 FC -> '.'identifier FC |  '(' AGC

@@ -7,6 +7,8 @@
 
 
 TreePart::TreePart(){
+    visited = false;
+    brothers = 0;
 }
 
 Symbol* TreePart::getSymbol(){

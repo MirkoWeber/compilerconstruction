@@ -15,7 +15,9 @@ public:
 
 private:
     TreePart* root;
-    int getDepth();
+    int getDepth(TreePart* , int);
+    TreePart* getLeafEbene(TreePart* , int );
+    int depth;
 };
 
 

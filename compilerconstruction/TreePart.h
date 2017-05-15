@@ -17,6 +17,10 @@ public:
     Symbol* getSymbol();
     vector<TreePart*>* getSon();
     void print();
+    int ebene;
+    bool visited;
+    int sonPosition;
+    int brothers;
 protected:
     Symbol* symbol;
     std::vector<TreePart*> son;

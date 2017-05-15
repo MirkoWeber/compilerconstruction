@@ -14,7 +14,7 @@
 #include "ArgumentList.h"
 
 ArgumentList::ArgumentList() : TreePart() {
-    typeName = "ArgumentListDeclaration";
+    typeName = "ArgumentListDecl";
     Types types = Types();
     lexxer myLexer = lexxer();
     symbol = myLexer.next();

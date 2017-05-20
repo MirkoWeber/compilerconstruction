@@ -14,7 +14,7 @@
 #include "Statement.h"
 
 Statement::Statement() : TreePart() {
-    typeName = "Statement";
+    typeName = "ST  ";
     Symbol* symbolTmp;
     Types types = Types();
     lexxer myLexer = lexxer();
@@ -32,10 +32,11 @@ Statement::Statement() : TreePart() {
     } else if(symbol->getType() == types.identifierDeclBool || symbol->getType() == types.identifierDeclInt){
         symbolTmp = myLexer.preview();
     }
-    if(myLexer.preview()->getValue() != "}" ) son.push_back(new Statement());
-        
-    
-    
+    if(myLexer.preview()->getValue() != "}" ) {
+        son.push_back(new Statement());  
+    }else{
+        myLexer.next();
+    }
 }
 
 Statement::Statement(const Statement& orig) {

@@ -5,29 +5,25 @@
  */
 
 /* 
- * File:   StatementS.cpp
+ * File:   FunctionType.cpp
  * Author: Nabztastic
  * 
- * Created on 14. Mai 2017, 17:44
+ * Created on 15. Mai 2017, 22:00
  */
 
-#include "StatementS.h"
-#include "Statement.h"
+#include "FunctionType.h"
 
-StatementS::StatementS() : TreePart() {
-    typeName = "ST' ";
-    Symbol* symbolTmp;
+FunctionType::FunctionType() : TreePart() {
+    typeName = "FT  ";
     Types types = Types();
     lexxer myLexer = lexxer();
     symbol = myLexer.next();
-    son.push_back(new Statement());
-
-        
+    
 }
 
-StatementS::StatementS(const StatementS& orig) {
+FunctionType::FunctionType(const FunctionType& orig) {
 }
 
-StatementS::~StatementS() {
+FunctionType::~FunctionType() {
 }
 

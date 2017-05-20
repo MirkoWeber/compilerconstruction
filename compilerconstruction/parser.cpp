@@ -79,11 +79,11 @@ void parser::printTree(TreePart* start){
             if( myLeaf != NULL ){
                 if(counter == 0){
                     for(int s = 0; s < myLeaf->sonPosition ; s++){
-                        cout << "-------------- ";
+                        cout << "---- ";
                     }
                 }else
                     for(int s = 0; s< myLeaf->sonPosition - ( oPosition + 1 ) ; s++ ){
-                        cout << "-------------- ";
+                        cout << "---- ";
                     } 
                 
                 

@@ -3,14 +3,20 @@
 S -> PC ID PB 
 PC -> keyword"Package" identifier
 ID -> keyword"import" string | null
-PB -> FD 
-FD -> keyword"func" identifier '(' AG '{' ST '}'
-ST -> identifier'='AE ST' | keyword"if" '(' LE ST' | identifier FC ST' | identifierDecl | null 
-ST'-> ST | null
+PB -> FD FD'
+FD'-> FD | null
+FD -> keyword"func" identifier '(' AG '{' ST
+ST -> identifier '=' AE ST' | keyword"if" '(' LE ST' | identifier FC ST' | identifier VD | }
+VD ->
+ST'-> ST | }
+
+LE -> ??
+
 
 FC -> '.'identifier FC |  '(' AGC
-AG -> identifierDecl AG' | ')'
-AG'-> ',' AG | ')'
+AG -> identifierDecl AG' | ')' FT
+AG'-> ',' AG | ')' FT
+FT -> keyword = "int" | keyword = "bool" | null
 
 AGC -> identifier AGC' | const AGC' | ')'
 AGC'-> ',' AGC | ')'
@@ -28,7 +34,8 @@ FA -> '(' AE ')' | identifier | constant
 string = "{letter | number}" 
 identifier = letter { letter | number }
 identifierDecl = identifier vType
-tokens = ( | ) | ; | { | } | ,
+identigierDeclFB = identifier ':=' 
+tokens = ( | ) | ; | { | } | , | := | += | 
 
 
 keywords
@@ -37,6 +44,10 @@ keywords
 package
 import
 func
+do
+while
+for
+
 
 PARSER, ToDo: 
 

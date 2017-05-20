@@ -126,7 +126,7 @@ void lexxer::lex(){
                 }
             }
             
-            continue;
+            if(quotationStart == false) continue;
         }
         toGet += sourceFile.at(i);
     }
@@ -194,26 +194,6 @@ void lexxer::cleanTable(){
             }
             
         }
-    }
-    for( int i = myTable.size() - 1 ; i >= 0 ; i-- ){
-        string getValue = myTable.at(i)->getValue();
-        string pushValue = "";
-        int getStart = 0;
-        for(int c = 0 ;  c < getValue.length() ; c++){
-            if( getValue.at(c) == ' ' || getValue.at(c) == 9){
-                getStart = c;
-            }else{
-                break;
-            }
-        }
-        for(int c = getStart ; c < getValue.length() ; c++ ){
-            pushValue += getValue.at(c);
-
-        }
-        myTable.at(i) = new Symbol( pushValue , myTable.at(i)->getType() , myTable.at(i)->getIChar() , myTable.at(i)->getLine());
-            
-
-
     }
     
 }

@@ -15,7 +15,7 @@
 #include "../TreePart.h"
 
 FunctionDeclaration::FunctionDeclaration() : TreePart() {
-    typeName = "FunctionDeclaration";
+    typeName = "FD  ";
     Types types = Types();
     lexxer myLexer = lexxer();
     symbol = myLexer.next();
@@ -27,6 +27,13 @@ FunctionDeclaration::FunctionDeclaration() : TreePart() {
         std::cout << "ERR: identifier after func expected" << line;
         exit(123);
     }
+    if( myLexer.preview() != NULL){
+        if( myLexer.preview()->getType() == types.keyword && myLexer.preview()->getValue() == types.func ){
+            myLexer.next();
+           son.push_back(new FunctionDeclaration()); 
+        }
+    }
+    
 }
 
 FunctionDeclaration::FunctionDeclaration(const FunctionDeclaration& orig) {

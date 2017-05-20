@@ -1,7 +1,7 @@
 #include "ImportDeclaration.h"
 
 ImportDeclaration::ImportDeclaration() : TreePart() {
-    typeName = "ImportDeclaration";
+    typeName = "ID  ";
     Types types = Types();
     lexxer myLexer = lexxer();
     symbol = myLexer.next();

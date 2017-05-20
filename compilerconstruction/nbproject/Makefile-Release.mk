@@ -48,6 +48,7 @@ OBJECTFILES= \
 	${OBJECTDIR}/pClasses/FunctionBlock.o \
 	${OBJECTDIR}/pClasses/FunctionCall.o \
 	${OBJECTDIR}/pClasses/FunctionDeclaration.o \
+	${OBJECTDIR}/pClasses/FunctionType.o \
 	${OBJECTDIR}/pClasses/ImportDeclaration.o \
 	${OBJECTDIR}/pClasses/PackageClause.o \
 	${OBJECTDIR}/pClasses/Start.o \
@@ -144,6 +145,11 @@ ${OBJECTDIR}/pClasses/FunctionDeclaration.o: pClasses/FunctionDeclaration.cpp
 	${MKDIR} -p ${OBJECTDIR}/pClasses
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/pClasses/FunctionDeclaration.o pClasses/FunctionDeclaration.cpp
+
+${OBJECTDIR}/pClasses/FunctionType.o: pClasses/FunctionType.cpp
+	${MKDIR} -p ${OBJECTDIR}/pClasses
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/pClasses/FunctionType.o pClasses/FunctionType.cpp
 
 ${OBJECTDIR}/pClasses/ImportDeclaration.o: pClasses/ImportDeclaration.cpp
 	${MKDIR} -p ${OBJECTDIR}/pClasses

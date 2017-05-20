@@ -1,7 +1,7 @@
 #include "Start.h"
 
 Start::Start() : TreePart(){
-    typeName = "Start";
+    typeName = "S   ";
     Types types;
     lexxer myLex = lexxer(); 
     symbol = myLex.next();

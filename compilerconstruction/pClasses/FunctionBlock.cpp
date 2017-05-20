@@ -14,7 +14,7 @@
 #include "FunctionBlock.h"
 
 FunctionBlock::FunctionBlock() : TreePart() {
-    typeName = "FunctionBlock";
+    typeName = "FB  ";
     Types types = Types();
     lexxer myLexer = lexxer();
     symbol = myLexer.next();

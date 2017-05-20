@@ -2,10 +2,31 @@ package main
 
 import "fmt"
 
-func main(integerTest int , booleanTest bool , test int ){
-deineMuddi("stinkt")
-	fmt.Println("Hello, playground" , deineMuddi , 125)
-	deineMuddi("stinkt")
-	fmt.Println("Hello, playground" , deineMuddi , 125)
-	deineMuddi("stinkt")
+func main(integerTest int , booleanTest bool ){
+	test("test")
 }
+
+
+
+func test( test int ){
+	
+	fmt.Println("test2")
+
+}
+
+
+
+func test( test int ){
+	
+	fmt.Println("test2")
+
+}
+
+
+
+func test( test int ){
+	
+	fmt.Println("test2")
+
+}
+

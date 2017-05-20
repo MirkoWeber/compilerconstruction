@@ -12,6 +12,7 @@
       <itemPath>pClasses/FunctionBlock.h</itemPath>
       <itemPath>pClasses/FunctionCall.h</itemPath>
       <itemPath>pClasses/FunctionDeclaration.h</itemPath>
+      <itemPath>pClasses/FunctionType.h</itemPath>
       <itemPath>pClasses/ImportDeclaration.h</itemPath>
       <itemPath>pClasses/PackageClause.h</itemPath>
       <itemPath>pClasses/Start.h</itemPath>
@@ -38,6 +39,7 @@
       <itemPath>pClasses/FunctionBlock.cpp</itemPath>
       <itemPath>pClasses/FunctionCall.cpp</itemPath>
       <itemPath>pClasses/FunctionDeclaration.cpp</itemPath>
+      <itemPath>pClasses/FunctionType.cpp</itemPath>
       <itemPath>pClasses/ImportDeclaration.cpp</itemPath>
       <itemPath>pClasses/PackageClause.cpp</itemPath>
       <itemPath>pClasses/Start.cpp</itemPath>
@@ -121,6 +123,10 @@
       <item path="pClasses/FunctionDeclaration.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="pClasses/FunctionDeclaration.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="pClasses/FunctionType.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="pClasses/FunctionType.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="pClasses/ImportDeclaration.cpp" ex="false" tool="1" flavor2="0">
       </item>
@@ -216,6 +222,10 @@
       <item path="pClasses/FunctionDeclaration.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="pClasses/FunctionDeclaration.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="pClasses/FunctionType.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="pClasses/FunctionType.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="pClasses/ImportDeclaration.cpp" ex="false" tool="1" flavor2="0">
       </item>

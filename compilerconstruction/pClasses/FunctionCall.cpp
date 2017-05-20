@@ -16,7 +16,7 @@
 
 
 FunctionCall::FunctionCall() : TreePart() {
-    typeName = "FunctionCall";
+    typeName = "FC  ";
     Types types = Types();
     lexxer myLexer = lexxer();
     symbol = myLexer.next();
